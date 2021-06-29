@@ -2,7 +2,7 @@ import { Class, JsonArray, JsonObject, JsonValue, ObservableLike, Primitive, Typ
 
 export type TJson = JsonObject | JsonArray;
 
-export type TJ2TOptions = {
+export type TJTTOptions = {
   // 缩进单位，值为空格数
   indentUnit?: number;
 

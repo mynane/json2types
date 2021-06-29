@@ -1,4 +1,4 @@
-# json2types
+# json-ts-types
 
 将 json 数据转化为 ts 的 types 结构
 
@@ -7,13 +7,13 @@
 use npm:
 
 ```bash
-npm i --save-dev json2types
+npm i --save-dev json-ts-types
 ```
 
 use yarn:
 
 ```bash
-yarn add -D json2types
+yarn add -D json-ts-types
 ```
 
 ### 使用
@@ -60,8 +60,8 @@ const data = {
 例子：
 
 ```javascript
-const j2t = new JSON2TYPES();
-console.log(j2t.formart(data));
+const jtt = new JsonTsTypes();
+console.log(jtt.formart(data));
 ```
 
 输出：
@@ -86,7 +86,7 @@ export type TDemo = {
 初始化：
 
 ```ts
-type TJ2TOptions = {
+type TJTTOptions = {
   // 缩进单位，值为空格数, 默认2
   indentUnit?: number;
 
@@ -97,11 +97,11 @@ type TJ2TOptions = {
   useExport?: boolean;
 };
 
-const j2t = new JSON2TYPES(options?: TJ2TOptions)
+const jtt = newJsonTsTypes(options?: TJTTOptions)
 ```
 
 使用：
 
 ```ts
-const result = j2t.formart(data, name?: string, options?: TJ2TOptions)
+const result = jtt.formart(data, name?: string, options?: TJTTOptions)
 ```

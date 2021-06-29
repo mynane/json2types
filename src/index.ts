@@ -1,5 +1,5 @@
 import { JsonArray, JsonObject } from "type-fest";
-import { TAny, TJ2TOptions, TJson } from "./types";
+import { TAny, TJTTOptions, TJson } from "./types";
 import { assert, firstCharToUpcase, isArray, isEmpty, isObject } from "./utils";
 
 const defaultConfs = {
@@ -15,11 +15,11 @@ enum EIndents {
 
 type TDefaultConfs = typeof defaultConfs;
 
-class JSON2TYPES {
+class JsonTsTypes {
   private options: TDefaultConfs;
   public indents: string;
 
-  constructor(options: TJ2TOptions) {
+  constructor(options: TJTTOptions) {
     this.options = { ...defaultConfs, ...(options ?? {}) };
     const { indentUnit, indentWithTabs } = this.options;
 
@@ -77,4 +77,4 @@ class JSON2TYPES {
   }
 }
 
-export default JSON2TYPES;
+export default JsonTsTypes;
