@@ -9,8 +9,8 @@ export type TJ2TOptions = {
   // 使用tab缩进
   indentWithTabs?: boolean;
 
-  // 全部字段可选
-  allOptional?: boolean;
+  // 是否导出
+  useExport?: boolean;
 };
 
 export type TAny = Primitive | Class | TypedArray | JsonObject | JsonArray | JsonValue | ObservableLike;

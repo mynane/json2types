@@ -5,7 +5,6 @@ import { assert, firstCharToUpcase, isArray, isEmpty, isObject } from "./utils";
 const defaultConfs = {
   indentUnit: 2,
   indentWithTabs: false,
-  allOptional: false,
   useExport: true,
 };
 
