@@ -1,0 +1,12 @@
+export type TDemo = {
+		data?: {
+				id?: string;
+				type?: string;
+				name?: string;
+				enabled?: boolean;
+				corp_id?: string;
+				is_default?: boolean;
+				create_ts?: number;
+				update_ts?: number;
+		}[];
+}

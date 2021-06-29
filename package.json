@@ -5,7 +5,7 @@
   "author": "Alistair Smith <alistairsmith01@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "eslint . --fix&&jest",
+    "test": "eslint . --fix && jest",
     "prepublishOnly": "npm run test&&npm run build",
     "build": "tsc"
   },
@@ -29,6 +29,7 @@
     "printWidth": 120
   },
   "dependencies": {
-    "tslib": "^2.1.0"
+    "tslib": "^2.1.0",
+    "type-fest": "^1.2.1"
   }
 }

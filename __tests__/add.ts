@@ -1,5 +1,123 @@
-import { add } from "../src";
+import JSON2TYPES from "../src";
+
+const data = {
+  data: [
+    {
+      id: "5fcf2d53c91c9bef03583b6b",
+      type: "text",
+      name: "name",
+      enabled: true,
+      corp_id: "ww0273164e290049d5",
+      is_default: true,
+      create_ts: 1607413075,
+      update_ts: 1614065954,
+    },
+    {
+      id: "5fdac267ff0df4da07801dbe",
+      type: "text",
+      name: "tb_nick",
+      enabled: true,
+      corp_id: "ww0273164e290049d5",
+      is_default: true,
+      create_ts: 1608172135,
+      update_ts: 1620440673,
+    },
+    {
+      id: "609e4749157741d8479b5a42",
+      type: "text",
+      name: "jd_nick",
+      enabled: true,
+      corp_id: "ww0273164e290049d5",
+      is_default: true,
+      create_ts: 1620985673,
+      update_ts: 1621410474,
+    },
+    {
+      id: "5fcf2d53c91c9bef03583b6d",
+      type: "radio",
+      name: "sex",
+      enabled: true,
+      corp_id: "ww0273164e290049d5",
+      is_default: true,
+      create_ts: 1607413075,
+      update_ts: 1608275690,
+    },
+    {
+      id: "5fcf2d53c91c9bef03583b6c",
+      type: "text",
+      name: "age",
+      enabled: true,
+      corp_id: "ww0273164e290049d5",
+      is_default: true,
+      create_ts: 1607413075,
+      update_ts: 1614072582,
+    },
+    {
+      id: "603dfb476eeb26310e6b82fc",
+      type: "baby_age",
+      name: "大宝",
+      enabled: true,
+      corp_id: "ww0273164e290049d5",
+      create_ts: 1614674759,
+      update_ts: 1614676108,
+    },
+    {
+      id: "6034cae76eeb26310e6b82eb",
+      type: "text",
+      name: "自定义21",
+      corp_id: "ww0273164e290049d5",
+      create_ts: 1614072551,
+      update_ts: 1616035030,
+    },
+    {
+      id: "5fcf2d53c91c9bef03583b6e",
+      type: "addr",
+      name: "region",
+      corp_id: "ww0273164e290049d5",
+      is_default: true,
+      create_ts: 1607413075,
+      update_ts: 1616057693,
+    },
+    {
+      id: "6034cae26eeb26310e6b82ea",
+      type: "text",
+      name: "自定义12",
+      enabled: true,
+      corp_id: "ww0273164e290049d5",
+      create_ts: 1614072546,
+      update_ts: 1616035113,
+    },
+    {
+      id: "6034caef6eeb26310e6b82ec",
+      type: "text",
+      name: "自定义3",
+      corp_id: "ww0273164e290049d5",
+      create_ts: 1614072559,
+      update_ts: 1616035028,
+    },
+    {
+      id: "6052bcea238345e0c16b813c",
+      type: "baby_age",
+      name: "幼儿年龄",
+      enabled: true,
+      corp_id: "ww0273164e290049d5",
+      create_ts: 1616035050,
+      update_ts: 1616035114,
+    },
+    {
+      id: "60894db073520d588ffcf885",
+      type: "text",
+      name: "12312",
+      corp_id: "ww0273164e290049d5",
+      create_ts: 1619611056,
+      update_ts: 1619611056,
+    },
+  ],
+};
 
 test("It should add two numbers correctly", () => {
-  expect(add(1, 2)).toBe(3);
+  const j2t = new JSON2TYPES({
+    indentUnit: 2,
+  });
+  console.log(j2t.formart(data, "demo", {}));
 });
