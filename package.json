@@ -1,0 +1,27 @@
+{
+  "name": "json-ts-types",
+  "version": "1.0.0",
+  "repository": "https://github.com/mynane/json2types",
+  "homepage": "https://github.com/mynane/json2types",
+  "author": "mynane <755836844@qq.com>",
+  "license": "MIT",
+  "description": "根据json字符串自动生成TypeScript interface定义",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "json",
+    "typescript",
+    "interface"
+  ],
+  "bugs": {
+    "url": "https://github.com/mynane/json2types/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
