@@ -1,13 +1,17 @@
-# json-to-ts-interface
-根据json字符串自动生成TypeScript interface定义
+# json-ts-type
+
+根据 json 字符串自动生成 TypeScript interface 定义
 
 **使用方式：**
-````
-const interfaceDefinition = require('json-to-ts-interface');
+
+```
+const interfaceDefinition = require('json-ts-type');
 const res = interfaceDefinition(json对象||json字符串, {})
-````
+```
+
 **参数配置：**
-````
+
+```
 方法第二个参数接收一个对象，对象内容如下：
 
 {
@@ -17,8 +21,10 @@ const res = interfaceDefinition(json对象||json字符串, {})
   interfaceName: 'Result',  // 导出第一级名称
   interfaceNamePrefix: 'I' ,// 接口名称前缀
 }
-````
+```
+
 **示例：**
+
 ```
 
 json字符串
@@ -27,7 +33,8 @@ json字符串
 ```
 
 **结果：**
-````
+
+```
 don't export模式
 
 interface IResult {
@@ -46,9 +53,9 @@ interface IRewardBuyers {
     avatar: string;
     slug: string;
 }
-````
+```
 
-````
+```
 export 模式
 
 export interface IResult {
@@ -67,9 +74,9 @@ export interface IRewardBuyers {
     avatar: string;
     slug: string;
 }
-````
+```
 
-````
+```
 export default模式
 
 export default interface IResult {
@@ -88,9 +95,4 @@ interface IRewardBuyers {
     avatar: string;
     slug: string;
 }
-````
-
-
-点击下面的连接将跳转到[在线体验地址](https://etctest.cyzl.com/hello_json 'HelloJSON')，由于是网页版所以做了语法着色处理
-
-点击下面的连接查看完整版源码[完整版源码地址](https://github.com/llf137224350/hello_json 'HelloJSON')
+```
