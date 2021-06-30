@@ -1,11 +1,11 @@
-# json-ts-type
+# json-ts-types
 
 根据 json 字符串自动生成 TypeScript interface 定义
 
 **使用方式：**
 
 ```
-const interfaceDefinition = require('json-ts-type');
+const interfaceDefinition = require('json-ts-types');
 const res = interfaceDefinition(json对象||json字符串, {})
 ```
 

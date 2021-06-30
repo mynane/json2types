@@ -7,6 +7,7 @@ let Config = {
   lineBreak: "\n", // 换行符
   indent: "  ", // 缩进 默认两个空格
   interfaceName: "Result", // 导出第一级名称
+  type: "interface", // 定义类型 interface | type
   interfaceNamePrefix: "I", // 接口名称前缀
   normalTypes: ["string", "number", "boolean"], // 基本类型
 };
@@ -62,6 +63,15 @@ function _getInterfaceName(key) {
 }
 
 /**
+ * 获取类型名
+ * @param {*} type
+ * @returns
+ */
+function __getType(type) {
+  return type === "type" ? " =" : "";
+}
+
+/**
  * 如果是导出为默认，只能导出最外一级
  * @param name
  * @returns {string}
@@ -80,11 +90,11 @@ function _getRenderInterface(name) {
         : Config.globalExportMode === Config.exportDefault
         ? "export default "
         : ""
-    }interface`;
+    }${Config.type}`;
   }
-  return `${
-    Config.globalExportMode === Config.export ? "export " : ""
-  }interface`;
+  return `${Config.globalExportMode === Config.export ? "export " : ""}${
+    Config.type
+  }`;
 }
 
 function __getRenderInterfaceName(name) {
@@ -178,14 +188,14 @@ function _parseJson(json, name, inters, first = true, ind = Config.indent) {
     // 判断是否有key
     inters += `${_getRenderInterface(name)} ${__getRenderInterfaceName(
       name
-    )} ${_getRenderLeft()}`;
+    )}${__getType(Config.type)} ${_getRenderLeft()}`;
     inters += _getRenderRight();
     return inters;
   }
   if (!inters && first) {
     inters += `${_getRenderInterface(name)} ${__getRenderInterfaceName(
       name
-    )} ${_getRenderLeft()}`;
+    )}${__getType(Config.type)} ${_getRenderLeft()}`;
   } else if (!inters && !first) {
     inters += _getRenderLeft();
   }
