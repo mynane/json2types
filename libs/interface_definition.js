@@ -56,7 +56,8 @@ function _getInterfaceName(key) {
     arr[i] = _getBaseName(arr[i]);
   }
   let fullName = arr.join("");
-  fullName = Config.interfaceNamePrefix + _getBaseName(fullName);
+  fullName =
+    Config.interfaceNamePrefix + Config.interfaceName + _getBaseName(fullName);
   fullName = _getOnlyInterfaceName(fullName);
   interfaceNames.push(fullName);
   return fullName;
@@ -241,12 +242,7 @@ module.exports = function interfaceDefinition(res, options = {}) {
   interfaceNames = [];
   try {
     const json = typeof res === "string" ? JSON.parse(res) : res;
-    result = _parseJson(
-      json,
-      _getInterfaceName(Config.interfaceName),
-      "",
-      true
-    );
+    result = _parseJson(json, _getInterfaceName(""), "", true);
     for (const obj of objs) {
       result += Config.lineBreak;
       result += _parseJson(obj.value, obj.key, "", true);
